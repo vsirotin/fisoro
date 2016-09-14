@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Page Multi-Selection with FiSoro</title>
+</head>
+<body >
+
+<div  data-ng-app="NumberShop" data-ng-controller="FiSoroController">
+    <table border="1" >
+    <tr>
+        <td>
+            100 * N
+        </td>
+        <td>
+            10 * N
+        </td>
+        <td>
+            N
+        </td>
+        <td>
+            Whole Number
+        </td>
+        <td>
+            Values
+        </td>
+        <td>
+            Text representation
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p data-ng-repeat="y1 in filterGroups.Nx100.filters">
+                <input type="checkbox" data-ng-model="y1.value" id="{{y1.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y1.name}}</p>
+        </td>
+        <td>
+            <p data-ng-repeat="y2 in filterGroups.Nx10.filters">
+                <input type="checkbox" data-ng-model="y2.value" id="{{y2.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y2.name}}</p>
+        </td>
+        <td>
+            <p data-ng-repeat="y3 in filterGroups.Nx1.filters">
+                <input type="checkbox" data-ng-model="y3.value" id="{{y3.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y3.name}}</p>
+        </td>
+        <td>
+            <p data-ng-repeat="y4 in filterGroups.WholeNumber.filters">
+                <input type="checkbox" data-ng-model="y4.value" id="{{y4.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y4.name}}</p>
+        </td>
+        <td>
+            <div data-ng-repeat="y5 in filterGroups.Values.filters">
+                <p>{{y5.name}}</p><p>
+                <input type="input" size="4"  id="{{y5.id}}"><button>Search</button></p></div>
+        </td>
+        <td>
+            <div data-ng-repeat="y6 in filterGroups.Texts.filters">
+                <p>{{y6.name}}</p><p>
+                <input type="input" size="20"  id="{{y6.id}}"></p><button>Search</button></div>
+        </td>
+    </tr>
+    </table>
+    <br>Selected {{numberSelectedOptions}} options and {{selections.length}} numbers.
+    <button data-ng-click="ShowSelections()" >Show Selection</button>
+    <ul>
+        <li data-ng-repeat="x in selections" data-ng-if="isShowSelectedObjects">
+            <a href='{{x[8]}}'>{{x[4]}} </a>  ({{x["NumberMatches"]}}) matches.
+        </li>
+    </ul>
+</div>
+<script src="js/angular.js"></script>
+<script src="js/NumberShopApp.js"></script>
+<script src="js/fisoro.js"></script>
+</body>
+</html>

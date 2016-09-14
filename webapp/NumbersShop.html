@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>FiSoro Number Shop</title>
+    <link rel="stylesheet" type="text/css" href="css/fisoro_demo.css">
+</head>
+<body >
+<h1>FiSoro Number Shop </h1>
+<div  data-ng-app="" data-ng-controller="FiSoroController">
+    <table border="1" >
+    <tr>
+        <td>
+            100 * N
+        </td>
+        <td>
+            10 * N
+        </td>
+        <td>
+            N
+        </td>
+        <td>
+            Whole Number
+        </td>
+        <td>
+            Values
+        </td>
+        <td>
+            Text representation
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p data-ng-repeat="y1 in filterGroups.Nx100.filters">
+                <input type="checkbox" data-ng-model="y1.value" id="{{y1.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y1.name}}</p>
+        </td>
+        <td>
+            <p data-ng-repeat="y2 in filterGroups.Nx10.filters">
+                <input type="checkbox" data-ng-model="y2.value" id="{{y2.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y2.name}}</p>
+        </td>
+        <td>
+            <p data-ng-repeat="y3 in filterGroups.Nx1.filters">
+                <input type="checkbox" data-ng-model="y3.value" id="{{y3.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y3.name}}</p>
+        </td>
+        <td>
+            <p data-ng-repeat="y4 in filterGroups.WholeNumber.filters">
+                <input type="checkbox" data-ng-model="y4.value" id="{{y4.id}}"
+                       data-ng-true-value="true" data-ng-false-value="false" />{{y4.name}}</p>
+        </td>
+        <td>
+            <div data-ng-repeat="y5 in filterGroups.Values.filters">
+                <p>{{y5.name}}</p><p>
+                <input type="text" size="4" data-ng-model="y5.value" id="{{y5.id}}"></p></div>
+        </td>
+        <td>
+            <div data-ng-repeat="y6 in filterGroups.Texts.filters">
+                <p>{{y6.name}}</p><p>
+                <input type="text" size="10"  data-ng-model="y6.value" id="{{y6.id}}"></p></div>
+        </td>
+    </tr>
+    </table>
+    <br>{{selections.length}} numbers available.
+    <button data-ng-click="ShowSelections()" >Show Selection</button>
+    <ul>
+        <li data-ng-repeat="x in selections" data-ng-if="isShowSelectedObjects" style="list-style-type:none">
+            <div class="tooltip"
+                 onclick="alert('Our congratulations!\nYou are now virtual owner of this number!')">
+                <img src="img/ShoppingCart.png" alt="Be virtual owner of number {{x[0]}}!" style="width:15px;height:15px;">
+                {{x[0]}}  ({{x["NumberMatches"]}}) matches.
+                <span class="tooltiptext">Click to be virtual owner of number {{x[0]}}!</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="js/fisoro.js"></script>
+</body>
+</html>

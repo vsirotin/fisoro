@@ -1,0 +1,83 @@
+{"filterGroups": [
+{
+	"name": "Nx100",
+	"type": "Bit Vector",
+	"columnInData": "2",
+	"filters": [
+	{"name": "Even number"},
+	{"name": "Uneven number"},
+	{"name": "Prime number"},
+	{"name": "Not prime number"},
+	{"name": "Fibonacci number"},
+	{"name": "Not Fibonacci number"},
+	{"name": "Factorial number"},
+	{"name": "Not factorial number"}
+	]
+},
+{
+	"name": "Nx10",
+	"type": "Bit Vector",
+	"columnInData": "3",
+	"filters": [
+	{"name": "Even number"},
+	{"name": "Uneven number"},
+	{"name": "Prime number"},
+	{"name": "Not prime number"},
+	{"name": "Fibonacci number"},
+	{"name": "Not Fibonacci number"},
+	{"name": "Factorial number"},
+	{"name": "Not factorial number"}
+	]
+},
+{
+	"name": "Nx1",
+	"type": "Bit Vector",
+	"columnInData": "4",
+	"filters": [
+	{"name": "Even number"},
+	{"name": "Uneven number"},
+	{"name": "Prime number"},
+	{"name": "Not prime number"},
+	{"name": "Fibonacci number"},
+	{"name": "Not Fibonacci number"},
+	{"name": "Factorial number"},
+	{"name": "Not factorial number"}
+	]
+},
+{
+	"name": "WholeNumber",
+	"type": "Bit Vector",
+	"columnInData": "5",
+	"filters": [
+	{"name": "Even number"},
+	{"name": "Uneven number"},
+	{"name": "Prime number"},
+	{"name": "Not prime number"},
+	{"name": "Fibonacci number"},
+	{"name": "Not Fibonacci number"},
+	{"name": "Factorial number"},
+	{"name": "Not factorial number"},
+	{"name": "Round"},
+	{"name": "Horizontal"}
+	]
+},
+{
+	"name": "Values",
+	"type": "Number",
+	"filters": [
+	{"name": "Min value", "value": "0", "type": "minValue", "columnInData": "0"},
+	{"name": "Max value", "value": "999", "type": "maxValue", "columnInData": "0"},
+	{"name": "Min digit sum", "value": "0", "type": "minValue", "columnInData": "1"},
+	{"name": "Max digit sum", "value": "27", "type": "maxValue", "columnInData": "1"}
+	]
+},
+{
+	"name": "Texts",
+	"type": "Text",
+	"filters": [
+	{"name": "Search in text representation", "value": "", "columnInData": "6"},
+	{"name": "Search in description", "value": "", "columnInData": "7"}
+	]
+}
+]
+}

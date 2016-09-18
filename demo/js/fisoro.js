@@ -5,7 +5,7 @@ $http - Angular service for asynchronously communication with server (in our cas
 **/
 function FiSoroController($rootScope, $scope, $http) {
 /**
- * @License FiSoro v.0.9.5
+ * @License FiSoro v.1.0.5
  * (c) 2015 Dr. Viktor Sirotin. http: //www.sirotin.eu
  * License type: MIT
  */

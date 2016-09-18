@@ -1,4 +1,4 @@
-package examples.numbers.shop;
+package eu.sirotin.fisoro.testdata.generator;
 
 import java.io.BufferedWriter;
 import java.io.File;

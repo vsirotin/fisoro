@@ -1,6 +1,5 @@
-package examples.numbers.shop;
+package eu.sirotin.fisoro.testdata.generator;
 
-import examples.numbers.shop.NumbersShopTestDataGenerator;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

@@ -9,7 +9,7 @@
 </head>
 <body >
 <h1>FiSoro Communist Number Store </h1>
-<div id="rcorners-explanations">
+<div class="rcorners-explanations">
 <p>Welcome in the communist number store!</p>
 <p>Why is this store communist? Because you get goods for free in this shop! (Of course it is a joke.)</p>
 <p>This page demonstrates browser-side search without any load on the server. All your searches run entirely in your browser.</p>
@@ -18,24 +18,25 @@
 see downloads and details in this GitHub repository: <a  href="https://github.com/vsirotin/fisoro">https://github.com/vsirotin/fisoro</a></p>
 </div>
 <p> </p>
-<div  id="rcorners-explanations">
+<div  class="rcorners-explanations">
 <p>You can select each number in interval 0-999. Your number can be represented as x =a*100+b*10+c.</p>
 <p>You can set properties of a,b,c and x itself. You can restrict x ot the digits sum y=a+b+c.</p>
-<p>You can also set also some substring that must appears in text representation of your number.</p>
+<p>You can also set some substring that must appears in text representation of your number.</p>
 <p>Have fun as you select and own your numbers!</p>
 </div>
 <p> </p>
-<div  id="rcorners-computations" data-ng-app="" data-ng-controller="FiSoroController">
+<div  class="rcorners-computations" data-ng-app="" data-ng-controller="FiSoroController">
     <table >
     <tr>
         <th> Properties of a </th><th> Properties of b </th><th> Properties of c </th>
         <th> Properties of x = a*100 + b*10 + c</th><th>Interval for value and digits sum</th>
         <th>Substrings</th>
     </tr>
+
     <tr>
         <td>
             <p data-ng-repeat="y1 in filterGroups.Nx100.filters">
-                <input type="checkbox" data-ng-model="y1.value" id="{{y1.id}}"
+                <input type="checkbox" class="mycheckbox" data-ng-model="y1.value" id="{{y1.id}}"
                        data-ng-true-value="true" data-ng-false-value="false" />{{y1.name}}</p>
         </td>
         <td>
@@ -56,7 +57,7 @@ see downloads and details in this GitHub repository: <a  href="https://github.co
         <td>
             <div data-ng-repeat="y5 in filterGroups.Values.filters">
                 <p>{{y5.name}}</p><p>
-                <input type="text" size="4" data-ng-model="y5.value" id="{{y5.id}}"></p></div>
+                <input type="number" min="0" max="999" size="4" data-ng-model="y5.value" id="{{y5.id}}"></p></div>
         </td>
         <td>
             <div data-ng-repeat="y6 in filterGroups.Texts.filters">
@@ -66,9 +67,8 @@ see downloads and details in this GitHub repository: <a  href="https://github.co
     </tr>
     </table>
     <p> </p>
-    <div  id="rcorners-result">
     <br>{{selections.length}} numbers available.
-    <button class="button button1" data-ng-click="ShowSelections()" >Show Selection</button>
+    <button  data-ng-click="ShowSelections()" >Show Selection</button>
 
     <ul>
         <li data-ng-repeat="x in selections" data-ng-if="isShowSelectedObjects" style="list-style-type:none">
@@ -76,12 +76,12 @@ see downloads and details in this GitHub repository: <a  href="https://github.co
                  onclick="alert('Our congratulations!\nYou are now virtual owner of this number!')">
                 <img src="img/ShoppingCart.png" alt="Be virtual owner of number {{x[0]}}!" style="width:15px;height:15px;">
                 {{x[0]}}  ({{x["NumberMatches"]}}) matches.
-                <span class="tooltiptext">Click to be virtual owner of number {{x[0]}} (Representation: '{{x[6]}}',
-                    Description: '{{x[7]}}')!</span>
+                <div class="tooltiptext"><p>Click to be virtual owner of number <span class="tooltipdata">{{x[0]}}</span>!</p>
+                    <p>Representation: <span class="tooltipdata">{{x[6]}}</span></p>
+                    <p>Description: <span class="tooltipdata">{{x[7]}}</span></p></div>
             </div>
         </li>
     </ul>
-    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="js/fisoro.js"></script>

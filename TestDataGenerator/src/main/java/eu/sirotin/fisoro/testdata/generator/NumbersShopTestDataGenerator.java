@@ -257,8 +257,8 @@ public class NumbersShopTestDataGenerator {
                 "\t\"type\": \"Text\",\n" +
                 "\t\"filters\": [");
 
-        sb.append(generateTextModelElement("Search in text representation", 6) + ",");
-        sb.append(generateTextModelElement("Search in description", 7));
+        sb.append(generateTextModelElement("Substring in text representation (e.g. Five)", 6) + ",");
+        sb.append(generateTextModelElement("Substring in description (e.g. 15)", 7));
 
         sb.append("\n\t]\n" +
                 "}\n" +

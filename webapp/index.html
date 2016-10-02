@@ -19,8 +19,8 @@ see downloads and details in this GitHub repository: <a  href="https://github.co
 </div>
 <p> </p>
 <div  class="rcorners-explanations">
-<p>You can select each number in interval 0-999. Your number can be represented as x =a*100+b*10+c.</p>
-<p>You can set properties of a,b,c and x itself. You can restrict x ot the digits sum y=a+b+c.</p>
+<p>You can select each number in interval 0-999. Your number can be represented as <span class="spandata">x =a*100+b*10+c</span></p>
+<p>You can set properties of a, b, c and x itself. You can restrict x of the digits sum <span class="spandata">y=a+b+c</span></p>
 <p>You can also set some substring that must appears in text representation of your number.</p>
 <p>Have fun as you select and own your numbers!</p>
 </div>
@@ -29,7 +29,7 @@ see downloads and details in this GitHub repository: <a  href="https://github.co
     <table >
     <tr>
         <th> Properties of a </th><th> Properties of b </th><th> Properties of c </th>
-        <th> Properties of x = a*100 + b*10 + c</th><th>Interval for value and digits sum</th>
+        <th> Properties of <span class="spandata">x =a*100+b*10+c</span></th><th>Interval for value and digits sum <span class="spandata">y=a+b+c</span></th>
         <th>Substrings</th>
     </tr>
 
@@ -76,9 +76,9 @@ see downloads and details in this GitHub repository: <a  href="https://github.co
                  onclick="alert('Our congratulations!\nYou are now virtual owner of this number!')">
                 <img src="img/ShoppingCart.png" alt="Be virtual owner of number {{x[0]}}!" style="width:15px;height:15px;">
                 {{x[0]}}  ({{x["NumberMatches"]}}) matches.
-                <div class="tooltiptext"><p>Click to be virtual owner of number <span class="tooltipdata">{{x[0]}}</span>!</p>
-                    <p>Representation: <span class="tooltipdata">{{x[6]}}</span></p>
-                    <p>Description: <span class="tooltipdata">{{x[7]}}</span></p></div>
+                <div class="tooltiptext"><p>Click to be virtual owner of number <span class="spandata">{{x[0]}}</span>!</p>
+                    <p>Representation: <span class="spandata">{{x[6]}}</span></p>
+                    <p>Description: <span class="spandata">{{x[7]}}</span></p></div>
             </div>
         </li>
     </ul>
